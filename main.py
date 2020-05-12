@@ -497,22 +497,24 @@ def monthly_subscription(email_id):
             return dashboard(email_id)
 
 
-def profile(result1):
-    c_id=str(result1[0][7])
-    cntry=("select name from Country where country_id=%s")
-    mycursor.execute(cntry,(c_id,))
+def profile(email_id):
+    query=("select * from User where email_id=%s")
+    mycursor.execute(query,(email_id,))
+    upd=mycursor.fetchall()
+    query1=("select name from Country where country_id=%s")
+    mycursor.execute(query1,(upd[0][7],))
     nationality=mycursor.fetchall()
     print()
     print(" Profile Details")
     print("-----------------")
-    print("Name: ",result1[0][2],result1[0][3])
-    print("Registered Email: ", result1[0][0])
-    print("Date of Birth: ", result1[0][4])
-    print("Sex: ", result1[0][5])
-    print("Phone: ", result1[0][6])
+    print("Name: ",upd[0][2],upd[0][3])
+    print("Registered Email: ", upd[0][0])
+    print("Date of Birth: ", upd[0][4])
+    print("Sex: ", upd[0][5])
+    print("Phone: ", upd[0][6])
     print("Nationality: ",nationality[0][0])
-    print("Account Balance: ",result1[0][8])
-    print("Subscription Type: ",result1[0][9])
+    print("Account Balance: ",upd[0][8])
+    print("Subscription Type: ",upd[0][9])
 
 
 def search():
@@ -917,7 +919,7 @@ def dashboard(email_id):
             elif action==9:
                 show_dashboard(email_id)
             elif action==10:
-                profile(result1)
+                profile(email_id)
             elif action==11:
                 update_profile(email_id)
             elif action==12:
