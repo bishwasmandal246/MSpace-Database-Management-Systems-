@@ -46,20 +46,8 @@ insert into MSpace.Monthly_Plan (plan_name, max_song_allowed, cost) values
 
 
 /* Populate the table User */
-insert into MSpace.User ( email_id, password, fname, lname, dob, sex, phone, country_id,funds,plan_name) values
-('bibidh@gmail.com','bibidh123','Bibidh','Mainali','1995-04-13','Male','9841414101','rsa',default,'Gold'),
-('chandan@gmail.com','chandan123','Chandan','Shah','1996-09-06','Male','9841414102','npl',default,'Gold'),
-('aakankshya@gmail.com','aakankshya123','Aakankshya','Shrestha','1997-07-30','Female','9841414103','col',default,'Gold'),
-('sitam@gmail.com','sitam123','Sitam','Gautam','1996-04-20','Female','9841414104','chn',default,'Gold'),
-('alex@gmail.com','alex123','Alex','Hans','1987-08-28','Male','9841414105','usa',default,'Gold'),
-('felix@gmail.com','felix123','Felix','Trans','2002-12-02','Female','9841414106','rus',default,'Gold'),
-('steve@gmail.com','steve123','Steve','Smith','1986-11-03','Male','9841414107','aus',default,'Gold'),
-('abd@gmail.com','abd123','ABD','Villiers','1990-01-01','Male','9841414108','rsa',default,'Gold'),
-('virat@gmail.com','virat123','Virat', 'Kohli','1988-08-18','Male','9841414109','ind',default,'Gold'),
-('vishal@gmail.com','vishal123','Vishal','Mandal','1995-03-10','Male','9841414110','npl',default,'Gold'),
-('bishwas@gmail.com','bishwas123','Bishwas','Mandal','1997-11-11','Male','9812345670','npl',default,'Gold');
-/* In my complete project I wish to take the input from the user itself when they create account and no information of other accounts can be seen by other users. But as of now just created a random set of values with my friends name for fulfilling the requirements of this assignment */
-/* There are a total of 11 users, i.e. Number of rows = 11 */
+insert into MSpace.User ( email_id, password, fname, lname, dob, sex, phone, country_id,funds,plan_name) values...
+/* Enter the Users Details */
 
 /* Populate the admin table */
 insert into MSpace.Admin(email_id,password,revenue) values ('bishwas@gmail.com','bishwas123',0);
