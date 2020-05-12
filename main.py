@@ -230,6 +230,7 @@ def home():
                 sys.exit(0)
     except ValueError:
         print("Invalid Value type, Please input integers.")
+        return home()
 
 
 
