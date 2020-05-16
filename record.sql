@@ -50,7 +50,7 @@ insert into MSpace.User ( email_id, password, fname, lname, dob, sex, phone, cou
 /* Enter the Users Details */
 
 /* Populate the admin table */
-insert into MSpace.Admin(email_id,password,revenue) values ('bishwas@gmail.com','bishwas123',0);
+insert into MSpace.Admin(email_id,password,revenue) values ();
 /* There is only one admin i.e. Number of rows = 1
 
 /* Populate the table Singer */
